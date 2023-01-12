@@ -20,7 +20,7 @@ async fn request_color_names() -> Result<(), Box<dyn std::error::Error>> {
             let color_names: Vec<Taxonomy> = resp.json().await?;
             write_json_to_file(&color_names)?;
         }
-        _ => println!("Error"),
+        _ => println!("Error found"),
     }
 
     Ok(())
